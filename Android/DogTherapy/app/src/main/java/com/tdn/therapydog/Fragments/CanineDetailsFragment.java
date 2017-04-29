@@ -1,4 +1,4 @@
-package com.tdn.therapydog.Fragments;
+package com.tdn.therapydog.fragments;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

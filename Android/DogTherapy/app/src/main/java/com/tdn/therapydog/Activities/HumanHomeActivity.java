@@ -17,7 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.tdn.therapydog.Fragments.HomeMapFragment;
+import com.tdn.therapydog.fragments.HomeMapFragment;
 import com.tdn.therapydog.R;
 
 public class HumanHomeActivity extends AppCompatActivity
@@ -48,7 +48,7 @@ public class HumanHomeActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-       // setHomeFragment();
+        setHomeFragment();
     }
 
     private void setHomeFragment(){
