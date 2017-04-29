@@ -35,9 +35,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
-            android:name=".Activities.LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -47,25 +48,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.HumanHomeActivity"
+            android:name=".activities.HumanHomeActivity"
             android:label="@string/title_activity_human_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activities.CanineHomeActivity"
+            android:name=".activities.CanineHomeActivity"
             android:label="@string/title_activity_canine_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activities.CanineDetailsActivity"
+            android:name=".activities.CanineDetailsActivity"
             android:label="@string/title_activity_canine_details"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".Activities.CompletedActivity"
+            android:name=".activities.CompletedActivity"
             android:label="@string/title_activity_completed"
-            android:parentActivityName=".Activities.CanineHomeActivity"
+            android:parentActivityName=".activities.CanineHomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tdn.therapydog.Activities.CanineHomeActivity" />
+                android:value="com.tdn.therapydog.activities.CanineHomeActivity" />
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package com.tdn.therapydog.Activities;
+package com.tdn.therapydog.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

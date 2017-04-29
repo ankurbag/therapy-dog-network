@@ -1,4 +1,4 @@
-package com.tdn.therapydog.Fragments;
+package com.tdn.therapydog.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -9,18 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.tdn.therapydog.DummyContent.DummyContent;
+import com.tdn.therapydog.dummycontent.DummyContent;
 import com.tdn.therapydog.R;
 import com.tdn.therapydog.model.Dog;
 

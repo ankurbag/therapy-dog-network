@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tdn.therapydog.Activities.CompletedActivity">
+    tools:context="com.tdn.therapydog.activities.CompletedActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

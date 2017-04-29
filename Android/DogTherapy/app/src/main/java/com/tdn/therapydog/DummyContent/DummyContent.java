@@ -1,4 +1,4 @@
-package com.tdn.therapydog.DummyContent;
+package com.tdn.therapydog.dummycontent;
 
 import com.tdn.therapydog.model.Dog;
 import com.tdn.therapydog.model.Location;
