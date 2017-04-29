@@ -1,0 +1,26 @@
+## Inspiration
+We researched about the emotional upliftment that a person can receive from the association with a friendly pet. While doing the research we stumbled upon Therapy Dogs on https://www.therapydogs.com. A Therapy Dog is a canine that might be trained to provide affection and comfort to people in hospitals, retirement homes, nursing homes, schools, hospices, disaster areas, and to people with autism. 
+
+## What it does
+Therapy Dogs are household dogs that can be used as a therapy with minimal training. The goal is to improve a participant's  emotional, or cognitive functioning and can be useful for educational and motivational effectiveness for participant. The training requirements for Therapy Dogs are easier than service/assistant dogs. So any dog with minimal training can be a Therapy Dog.  The goal of this project is to build a network between patients/caretakers  and caring individuals who
+are willing to share their "friendly pets" to bring happiness and uplift the emotional health. 
+
+## How we built it
+The product is an app that will facilitate the above goal. The product will help create a database of available therapy dogs and a database of interested trainers/testers. Any person with a dog can register his/her dog as a Therapy Dog. We will search and build a network of dog trainers. Moreover, any interested trainer can register him/her as a certified trainer. The goal is to connect a Therapy Dog with a dog trainer.   Any interested user of this app can search for Therapy Dogs
+nearby and can schedule a meetup with the pet. 
+
+## Challenges we ran into
+-  Building an minimally invasive user experience that gets the job done and gets out of the way.
+-  Creating a business plan, which should be profitable and sustainable.
+-  Creating an app that is easy to use for a non-technical user
+
+## Accomplishments that we're proud of
+- Minimally invasive user experience
+- Making someones day better.
+
+## What I learned
+
+## What's next for TherapyDogNetwork
+- Registration for Tester. (A Tester is a professional who provides training or working with dogs.)
+- Monetization plan
+- Creating a marketing plan for the identified demographics
