@@ -10,6 +10,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.tdn.therapydog.dummycontent.DummyContent;
 import com.tdn.therapydog.R;
@@ -41,6 +42,7 @@ public class CanineDetailsActivity extends AppCompatActivity implements CanineDe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dogList = DummyContent.getDogList();
 
@@ -56,6 +58,17 @@ public class CanineDetailsActivity extends AppCompatActivity implements CanineDe
         mPager.setCurrentItem(index, true);
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     public void onFragmentInteraction(Uri uri) {

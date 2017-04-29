@@ -14,6 +14,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -146,9 +147,13 @@ public class HomeMapFragment extends Fragment implements  OnMapReadyCallback, Go
             double lat = dog.getLocation().getLattitude();
             double lon = dog.getLocation().getLongitude();
 
-            googleMap.addMarker(new MarkerOptions()
+            MarkerOptions  marker = new MarkerOptions()
                     .position(new LatLng(lat, lon))
-                    .title(dog.getName())).setTag(i);
+                    .title(dog.getName());
+            marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.use_this_paw));
+            googleMap.addMarker(marker).setTag(i);
+
+
 
             maxLat = Math.max(lat, maxLat);
             minLat = Math.min(lat, minLat);
