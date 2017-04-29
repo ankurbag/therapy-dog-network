@@ -38,7 +38,7 @@
         <color name="ssl_text_label">#ffffffff</color>
         <color name="ssl_text_value">#ffffffff</color>
 
-        <color name="translucentBlack">#80000000</color>
+        <color name="translucentBlack">#30f4511e</color>
         <!-- Events -->
         <color name="rowGray">#FFABABAB</color>
         <color name="textRed">#FFFF0000</color>
@@ -59,8 +59,8 @@
         <color name="unselectedText">#808080</color>
         <color name="semiTransparentGray">#88333333</color>
         <color name="aBlue">#FF005daa</color>
-        <color name="colorPrimary">#3F51B5</color>
-        <color name="colorPrimaryDark">#303F9F</color>
+        <color name="colorPrimary">#F45115</color>
+        <color name="colorPrimaryDark">#d4481F</color>
         <color name="colorAccent">#FF4081</color>
 
         <color name="blue_semi_transparent">#99005DAA</color>
