@@ -5,6 +5,8 @@
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/checkbox"
         android:enabled="false"
+        android:text="completed"
+        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -13,15 +15,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/yes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yes"/>
-
-    <android.support.v7.widget.AppCompatButton
         android:id="@+id/no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No"/>
+        android:text="Cancel"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"/>
+
     </LinearLayout>
 </FrameLayout>

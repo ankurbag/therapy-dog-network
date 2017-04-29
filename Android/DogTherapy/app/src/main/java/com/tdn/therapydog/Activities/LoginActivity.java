@@ -24,8 +24,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void initViews(){
-
-
         ((Button)findViewById(R.id.humanButton)).setOnClickListener(this);
         ((Button)findViewById(R.id.canineButton)).setOnClickListener(this);
     }

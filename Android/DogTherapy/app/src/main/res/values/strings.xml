@@ -7,7 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
 
-    <string name="login_title">I\'M ,</string>
+    <string name="login_title">I have..</string>
 
     <string name="human">32 Teeth</string>
     <string name="dog">42 Teeth</string>
@@ -17,5 +17,7 @@
     <string name="fragment2_text">Fragment2</string>
     <string name="fragment3_text">Fragment3</string>
     <string name="fragment4_text">Fragment4</string>
+    <string name="title_activity_completed">CompletedActivity</string>
+    <string name="completed">Thanks for completing a Therapy Dog regitration</string>
 
 </resources>

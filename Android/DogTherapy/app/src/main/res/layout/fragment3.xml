@@ -7,11 +7,49 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/fragment3_text"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"/>
-    <include layout="@layout/fragment_content"/>
+        android:textColor="@color/transparent"
+        android:text="@string/fragment3_text"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
+
+    <include layout="@layout/fragment_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/translucentBlack">
+
+        <CheckBox
+            android:id="@+id/dhp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:text="DHPP" />
+
+        <CheckBox
+            android:id="@+id/rabies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dhp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:text="Rabies" />
+                <CheckBox
+            android:id="@+id/bordatella"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rabies"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:text="Bordatella" />
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
 

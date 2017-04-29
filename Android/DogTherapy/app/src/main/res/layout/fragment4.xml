@@ -10,8 +10,89 @@
         android:text="@string/fragment4_text"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"/>
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/transparent"
+        />
 
     <include layout="@layout/fragment_content"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/translucentBlack"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/agility_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/agility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Agility"
+                android:inputType="textNoSuggestions|textEmailAddress"
+                android:maxLines="1"
+                android:scrollHorizontally="true" />
+        </android.support.design.widget.TextInputLayout>
+
+           <android.support.design.widget.TextInputLayout
+                android:id="@+id/cgc_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/agility_til"
+                android:layout_alignRight="@+id/agility_til"
+                android:layout_below="@+id/agility_til"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/cgc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Canine Good Citizen"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+           <android.support.design.widget.TextInputLayout
+                android:id="@+id/obidience_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/agility_til"
+                android:layout_alignRight="@+id/agility_til"
+                android:layout_below="@+id/cgc_til"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/obidience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Obidience"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"/>
+            </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
 </android.support.design.widget.CoordinatorLayout>
 
