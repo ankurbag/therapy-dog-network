@@ -22,4 +22,15 @@
         <item name="android:textColor">@color/gray</item>
     </style>
 
+    <style name="AppCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/light_blue</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabPaddingStart">10dp</item>
+        <item name="tabPaddingEnd">10dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+
 </resources>

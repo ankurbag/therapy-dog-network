@@ -1,8 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+        <color name="textColorPrimary">#ff111111</color>
+        <color name="windowBackground">#ffe8e8e8</color>
+        <color name="navigationBarColor">@color/windowBackground</color>
 
-    <color name="gray">#3F51B5</color>
+        <color name="primary">#FF1f1f1f</color>
+        <color name="primaryDark">@color/windowBackground</color>
+        <color name="accent">#FFFFFF</color>
+        <color name="gray">#ffdfdfdf</color>
+        <color name="appBackground">#ACACAC</color>
+        <color name="textViewBackground">#ffffff</color>
+        <color name="forgotPasswordLink">#E50B14</color>
+        <color name="demoLoginLinkBackgroundDefault">#F18116</color>
+        <color name="demoLoginLinkBackgroundPressed">#E9E9E9</color>
+        <color name="demoLoginLinkTextPressed">#F18116</color>
+        <color name="actionBarBackground">#636363</color>
+
+        <color name="clipViewProgressBarScrubberColor">#DB1018</color>
+
+        <color name="eventsRowStartcolor">#ffFBFBFB</color>
+        <color name="eventsRowEndcolor">#fff4f4f4</color>
+        <color name="dark_gray">#ff333333</color>
+
+        <color name="eventsInReviewRowEndColor">#ffB20910</color>
+
+        <color name="eventsInReviewRowStartColor">#ffE50B14</color>
+
+        <color name="eventsDescriptionTextColor">#ff050704</color>
+        <color name="eventsDimissedTextColor">#555555</color>
+        <color name="eventRowPressed">#CCC2C2C2</color>
+        <color name="username_text">#ffffffff</color>
+        <color name="username_edit">#ff000000</color>
+
+        <color name="password_text">#ffffffff</color>
+        <color name="password_edit">#ff000000</color>
+
+        <color name="ssl_text_label">#ffffffff</color>
+        <color name="ssl_text_value">#ffffffff</color>
+
+        <color name="translucentBlack">#80000000</color>
+        <!-- Events -->
+        <color name="rowGray">#FFABABAB</color>
+        <color name="textRed">#FFFF0000</color>
+        <color name="favoriteBackgroud">#ff666666</color>
+
+        <color name="updatedBackGround">#FF8C00</color>
+
+        <!-- Clip View -->
+        <color name="headerRowText">#ffffff</color>
+        <color name="headerRowBackGround">#FF3030</color>
+        <!--FireBrick Red 1 -->
+        <color name="buttonTintOff">#009B9B9B</color>
+        <color name="buttonTintOn">#ff9B9B9B</color>
+
+        <color name="geolocation_permissions_prompt_background">#ffdddddd</color>
+        <!-- Tab Layout -->
+        <color name="tabSelectedBackground">#999999</color>
+        <color name="unselectedText">#808080</color>
+        <color name="semiTransparentGray">#88333333</color>
+        <color name="aBlue">#FF005daa</color>
+        <color name="colorPrimary">#3F51B5</color>
+        <color name="colorPrimaryDark">#303F9F</color>
+        <color name="colorAccent">#FF4081</color>
+
+        <color name="blue_semi_transparent">#99005DAA</color>
+        <color name="app_background">#e8e8e8</color>
+        <color name="alarm_red">#CC1912</color>
+        <color name="alarm_green">#417505</color>
+        <color name="secondary_text_color">#666666</color>
+        <color name="subtext">#AAA</color>
+        <color name="grey_semi_transparent">#77BBBBBB</color>
+        <color name="darker_transparent">#99000000</color>
+        <color name="dark_transparent">#77000000</color>
+        <color name="transparent">#00000000</color>
+        <color name="font_color_light_gray">#48515C</color>
+        <color name="listview_divider_gray">#C1C1C1</color>
+        <color name="tab_inactive_color">#999999</color>
+        <color name="shadow_gray">#C5C5C5</color>
+
+        <!-- Video -->
+        <color name="video_view_progress_bar_color">#8Cffffff</color>
+
+        <!-- Alert Detail -->
+        <color name="alert_detail_page_indicator_gray">#D5D5D5</color>
+        <color name="alert_detail_page_indicator_unselected_gray">#CC555555</color>
+
+        <!-- Notification Banner colors -->
+        <color name="notification_banner_red">#C50000</color>
+        <color name="notification_banner_darker_red">#C50000</color>
+
+        <!-- RecyclerView-->
+        <color name="scrollbar_thumb_gray">#9e9e9e</color>
+        <color name="listitem_alert_active_title_font">#CC1912</color>
+        <color name="listitem_alert_acked_title_font">#555555</color>
+        <color name="listitem_alert_time_font">#666666</color>
+        <color name="listitem_alert_status_font">#666666</color>
+        <color name="listitem_alert_location_font">@android:color/white</color>
+        <color name="listitem_alert_badge_number_font">@android:color/white</color>
+        <color name="listitem_alert_thumbnail_overlay">#4D000000</color>
+
+        <!--Colors from https://projects.invisionapp.com/boards/K8DO5DW39T4X#/637825 -->
+        <color name="darker_blue">#00467F</color>
+        <color name="light_blue">#3d6f99</color>
+        <color name="off_white">#F8F8F8</color>
+        <color name="light_text">#999999</color>
+        <color name="body_text">#666666</color>
+        <color name="emphasized_text">#555555</color>
+        <color name="dark_header_text">#333333</color>
+        <color name="accent_orange">#FF9B00</color>
+        <color name="light_red">#FF3B30</color>
+        <color name="dark_red">#CC1912</color>
+
+
+        <!-- Mic button -->
+        <color name="bg_utility_gray">#D9383F4A</color>
+        <color name="border_white">@android:color/white</color>
+        <color name="bg_mic_bar">#20ffffff</color>
+
+        <!-- Rec Util -->
+        <color name="bg_recorded_util_light_gray">#585858</color>
+        <color name="bg_recorded_util_button_pressed">#50ffffff</color>
+        <color name="bg_recorded_util_seekbar_progress">#2F5A86</color>
 </resources>

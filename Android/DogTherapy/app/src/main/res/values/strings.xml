@@ -13,5 +13,9 @@
     <string name="dog">42 Teeth</string>
     <string name="title_activity_human_home">HumanHomeActivity</string>
     <string name="title_activity_canine_home">CanineHomeActivity</string>
+    <string name="fragment1_text">Fragment1</string>
+    <string name="fragment2_text">Fragment2</string>
+    <string name="fragment3_text">Fragment3</string>
+    <string name="fragment4_text">Fragment4</string>
 
 </resources>

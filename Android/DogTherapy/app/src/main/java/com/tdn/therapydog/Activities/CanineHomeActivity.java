@@ -3,6 +3,8 @@ package com.tdn.therapydog.Activities;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,11 +14,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.tdn.therapydog.R;
+import com.tdn.therapydog.adapters.AppPagerAdapter;
 
 public class CanineHomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ViewPager mViewPager;
+    TabLayout mTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,8 @@ public class CanineHomeActivity extends AppCompatActivity
         });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mTabLayout = (TabLayout) findViewById(R.id.tablayout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -42,6 +52,7 @@ public class CanineHomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        setupUI();
     }
 
     @Override
@@ -99,5 +110,28 @@ public class CanineHomeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void setupUI() {
+        mViewPager.setAdapter(new AppPagerAdapter(getSupportFragmentManager()));
+        mTabLayout.setupWithViewPager(mViewPager);
+        for (int i = 0; i < mTabLayout.getTabCount(); i++) {
+            int padding = 10;
+            TextView imageView = new TextView(this);
+            imageView.setPadding(padding,padding,padding,padding);
+            if (i == 0) {
+                imageView.setText("first question");
+            }
+            if (i == 1) {
+                imageView.setText("second question");
+            }
+            if (i == 2) {
+                imageView.setText("third question");
+            }
+            if (i == 3) {
+                imageView.setText("fourth question");
+            }
+            mTabLayout.getTabAt(i).setCustomView(imageView);
+        }
     }
 }
