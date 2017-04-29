@@ -14,4 +14,22 @@
     <string name="title_activity_human_home">HumanHomeActivity</string>
     <string name="title_activity_canine_home">CanineHomeActivity</string>
 
+    <string name="dummy_user_name">Jack</string>
+    <string name="dummy_user_email">jack.johnny@gmail.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="google_maps_key">AIzaSyC5CgSqsAPbSu2aBAzbQ39rRxXelHpDO3E</string>
+    <string name="title_activity_canine_details">CanineDetailsActivity</string>
+
+
+    <string name="name_label">Name</string>
+    <string name="age_label">Age</string>
+
+    <string name="breed_label">Breed</string>
+    <string name="description_label">Description</string>
+
+    <string name="getDog">Get Dog</string>
+
 </resources>
