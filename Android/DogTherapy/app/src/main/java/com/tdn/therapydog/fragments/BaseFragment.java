@@ -29,6 +29,12 @@ public abstract class BaseFragment extends Fragment {
     private static final AtomicLong NEXT_ID = new AtomicLong(0);
     public static final int RES_ID = 1239817982;
 
+    ActivityInterface mCallback;
+
+    public interface ActivityInterface {
+        void onCancel(int layoutResourceId);
+        void onNext(int layoutResourceId);
+    }
     public AppCompatCheckBox checkBox;
     public AppCompatButton yes;
     public AppCompatButton no;
@@ -100,6 +106,8 @@ public abstract class BaseFragment extends Fragment {
             if (resId == R.layout.fragment4)
                 AndroidApplication.instance.question4 = true;
             setCheckeBox();
+            if (mCallback != null)
+                mCallback.onNext(getLayoutResourceId());
         }
     };
 
@@ -133,8 +141,21 @@ public abstract class BaseFragment extends Fragment {
             if (resId == R.layout.fragment4)
                 AndroidApplication.instance.question4 = false;
             setCheckeBox();
+            if (mCallback != null)
+                mCallback.onCancel(getLayoutResourceId());
         }
     };
+
+    @Override
+    public void onAttach(Context activity) {
+        super.onAttach(activity);
+        try {
+            mCallback = (ActivityInterface) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement SyncServiceReceiver.RequestInterface");
+        }
+    }
 
     public abstract int getLayoutResourceId();
 }

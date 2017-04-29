@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
@@ -10,9 +11,48 @@
         android:text="@string/fragment1_text"
         android:layout_gravity="center"
         android:gravity="center"
+        android:textColor="@color/transparent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"/>
 
 
     <include layout="@layout/fragment_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/translucentBlack"
+        android:layout_marginRight="40dp"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="email"
+                android:inputType="textNoSuggestions|textEmailAddress"
+                android:maxLines="1"
+                android:scrollHorizontally="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:text="Upload Picture"
+            android:layout_below="@id/username_input_layout"
+            android:layout_alignLeft="@id/username_input_layout"
+            android:layout_alignRight="@id/username_input_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
 

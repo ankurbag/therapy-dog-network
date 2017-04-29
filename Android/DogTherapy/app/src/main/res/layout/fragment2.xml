@@ -9,10 +9,132 @@
         android:layout_height="match_parent"
         android:text="@string/fragment2_text"
         android:layout_gravity="center"
+        android:textColor="@color/transparent"
         android:gravity="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"/>
 
     <include layout="@layout/fragment_content"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/translucentBlack"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/dogage_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/dogage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Age of the Dog"
+                android:inputType="textNoSuggestions|textEmailAddress"
+                android:maxLines="1"
+                android:scrollHorizontally="true" />
+        </android.support.design.widget.TextInputLayout>
+
+           <android.support.design.widget.TextInputLayout
+                android:id="@+id/dogname_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/dogage_til"
+                android:layout_alignRight="@+id/dogage_til"
+                android:layout_below="@+id/dogage_til"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dogname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Dog Name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+           <android.support.design.widget.TextInputLayout
+                android:id="@+id/dogcolor_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/dogage_til"
+                android:layout_alignRight="@+id/dogage_til"
+                android:layout_below="@+id/dogname_til"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dogcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Dog Color"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dogsex_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/dogage_til"
+                android:layout_alignRight="@+id/dogage_til"
+                android:layout_below="@+id/dogcolor_til"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dogsex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Dog Sex"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dogbreed_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/dogage_til"
+                android:layout_alignRight="@+id/dogage_til"
+                android:layout_below="@+id/dogsex_til"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dogbreed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Dog Sex"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"/>
+            </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
 

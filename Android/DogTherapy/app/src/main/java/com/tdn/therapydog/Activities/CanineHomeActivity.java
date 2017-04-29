@@ -1,5 +1,6 @@
 package com.tdn.therapydog.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,17 +15,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tdn.therapydog.R;
 import com.tdn.therapydog.adapters.AppPagerAdapter;
+import com.tdn.therapydog.fragments.BaseFragment;
 
 public class CanineHomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, BaseFragment.ActivityInterface {
 
     ViewPager mViewPager;
     TabLayout mTabLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,18 +122,51 @@ public class CanineHomeActivity extends AppCompatActivity
             TextView imageView = new TextView(this);
             imageView.setPadding(padding,padding,padding,padding);
             if (i == 0) {
-                imageView.setText("first question");
+                imageView.setText("Basic Information");
             }
             if (i == 1) {
-                imageView.setText("second question");
+                imageView.setText("Detailed Information");
             }
             if (i == 2) {
-                imageView.setText("third question");
+                imageView.setText("Vaccination");
             }
             if (i == 3) {
-                imageView.setText("fourth question");
+                imageView.setText("Training Details");
             }
             mTabLayout.getTabAt(i).setCustomView(imageView);
         }
+    }
+
+    @Override
+    public void onCancel(int layoutResourceId) {
+        changeToCancel();
+    }
+
+    @Override
+    public void onNext(int resId) {
+        if (resId == R.layout.fragment1) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(1);
+            tab.select();
+        }
+        if (resId == R.layout.fragment2) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(2);
+            tab.select();
+        }
+        if (resId == R.layout.fragment3) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(3);
+            tab.select();
+        }
+        if (resId == R.layout.fragment4) {
+            changeToCompleted();
+        }
+    }
+
+    public void changeToCompleted() {
+        Intent intent = new Intent(this, CompletedActivity.class) ;
+        startActivity(intent);
+    }
+
+    public void changeToCancel() {
+        finish();
     }
 }
