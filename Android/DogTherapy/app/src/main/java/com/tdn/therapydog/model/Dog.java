@@ -10,13 +10,19 @@ public class Dog {
     private int age;
     private String breed;
     private String description;
+    private String gender;
+    private String color;
     private Location location;
 
-    public Dog(String name, int age, String breed, String description, Location location) {
+    private String image;
+
+    public Dog(String name, int age, String breed, String description, String gender, String color, Location location) {
         this.name = name;
         this.age = age;
         this.breed = breed;
         this.description = description;
+        this.gender = gender;
+        this.color = color;
         this.location = location;
     }
 
@@ -58,5 +64,29 @@ public class Dog {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

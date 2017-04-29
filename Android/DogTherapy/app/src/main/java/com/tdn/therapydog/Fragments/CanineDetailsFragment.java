@@ -1,18 +1,24 @@
 package com.tdn.therapydog.Fragments;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tdn.therapydog.DummyContent.DummyContent;
 import com.tdn.therapydog.R;
 import com.tdn.therapydog.model.Dog;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -90,6 +96,21 @@ public class CanineDetailsFragment extends Fragment {
 
         textView = (TextView) view.findViewById(R.id.descriptionValue);
         textView.setText(dog.getDescription());
+
+        ImageView imageView = (ImageView) view.findViewById(R.id.canineImage);
+
+        if(!TextUtils.isEmpty(dog.getImage())) {
+            try {
+                // get input stream
+                InputStream ims = getActivity().getAssets().open(dog.getImage());
+                // load image as Drawable
+                Drawable d = Drawable.createFromStream(ims, null);
+                // set image to ImageView
+                imageView.setImageDrawable(d);
+            } catch (IOException ex) {
+                return;
+            }
+        }
 
 
         view.findViewById(R.id.getDogButton).setOnClickListener(new View.OnClickListener() {
