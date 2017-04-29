@@ -14,13 +14,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.tdn.therapydog.DummyContent.DummyContent;
-import com.tdn.therapydog.R;
+import com.tdn.therapydog.dummycontent.DummyContent;
 import com.tdn.therapydog.model.Dog;
 
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.tdn.therapydog.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the

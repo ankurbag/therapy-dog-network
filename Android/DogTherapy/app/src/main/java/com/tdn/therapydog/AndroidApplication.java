@@ -3,9 +3,6 @@ package com.tdn.therapydog;
 import android.app.Application;
 import android.content.ComponentCallbacks2;
 import android.content.Context;
-import android.view.View;
-
-import com.tdn.therapydog.fragments.BaseFragment;
 
 public class AndroidApplication extends Application  {
 

@@ -17,8 +17,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.tdn.therapydog.Activities.CanineDetailsActivity;
-import com.tdn.therapydog.DummyContent.DummyContent;
+import com.tdn.therapydog.activities.CanineDetailsActivity;
+import com.tdn.therapydog.dummycontent.DummyContent;
 import com.tdn.therapydog.R;
 import com.tdn.therapydog.model.Dog;
 

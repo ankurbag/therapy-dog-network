@@ -9,12 +9,12 @@ import android.view.View;
 
 import com.tdn.therapydog.R;
 
-public class CompletedActivity extends AppCompatActivity {
+public class DonationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_completed);
+        setContentView(R.layout.activity_donation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,7 +26,6 @@ public class CompletedActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 }

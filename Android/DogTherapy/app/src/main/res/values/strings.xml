@@ -37,5 +37,6 @@
     <string name="description_label">Description:</string>
 
     <string name="getDog">Get Dog</string>
+    <string name="title_activity_donation">DonationActivity</string>
 
 </resources>

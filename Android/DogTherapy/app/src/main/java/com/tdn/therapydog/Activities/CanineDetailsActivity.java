@@ -1,4 +1,4 @@
-package com.tdn.therapydog.Activities;
+package com.tdn.therapydog.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,9 +11,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import com.tdn.therapydog.DummyContent.DummyContent;
-import com.tdn.therapydog.fragments.CanineDetailsFragment;
+import com.tdn.therapydog.dummycontent.DummyContent;
 import com.tdn.therapydog.R;
+import com.tdn.therapydog.fragments.CanineDetailsFragment;
 import com.tdn.therapydog.model.Dog;
 
 import java.util.List;
