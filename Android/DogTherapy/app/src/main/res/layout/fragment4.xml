@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Agility"
-                android:inputType="textNoSuggestions|textEmailAddress"
+                android:inputType="textNoSuggestions"
                 android:maxLines="1"
                 android:scrollHorizontally="true" />
         </android.support.design.widget.TextInputLayout>
@@ -88,7 +88,7 @@
                     android:ems="10"
                     android:hint="Obidience"
                     android:imeOptions="actionDone"
-                    android:inputType="textPassword"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"/>
             </android.support.design.widget.TextInputLayout>
 

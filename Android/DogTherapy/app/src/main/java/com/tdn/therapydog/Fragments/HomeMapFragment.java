@@ -167,8 +167,8 @@ public class HomeMapFragment extends Fragment implements  OnMapReadyCallback, Go
 
 
 
-        googleMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(dogList.get(0).getLocation().getLattitude(),
-                dogList.get(0).getLocation().getLongitude()) , 18.0f) );
+        googleMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(dogList.get(4).getLocation().getLattitude(),
+                dogList.get(4).getLocation().getLongitude()) , 18.0f) );
        // googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(maxLat, maxLon)));
         googleMap.setOnMarkerClickListener(this);
 

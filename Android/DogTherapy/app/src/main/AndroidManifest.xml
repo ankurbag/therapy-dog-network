@@ -41,7 +41,7 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".activities.LoginActivity"
-            android:label="@string/title_activity_login"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
             >
@@ -53,25 +53,25 @@
         </activity>
         <activity
             android:name=".activities.HumanHomeActivity"
-            android:label="@string/title_activity_human_home"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
             />
         <activity
             android:name=".activities.CanineHomeActivity"
-            android:label="@string/title_activity_canine_home"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
             />
         <activity
             android:name=".activities.CanineDetailsActivity"
-            android:label="@string/title_activity_canine_details"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
             />
         <activity
             android:name=".activities.CompletedActivity"
-            android:label="@string/title_activity_completed"
+            android:label="@string/app_name"
             android:parentActivityName=".activities.CanineHomeActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
@@ -82,7 +82,7 @@
         </activity>
         <activity
             android:name=".activities.DonationActivity"
-            android:label="@string/title_activity_donation"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
             ></activity>

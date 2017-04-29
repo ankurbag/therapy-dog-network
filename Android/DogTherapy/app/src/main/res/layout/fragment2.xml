@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Age of the Dog"
-                android:inputType="textNoSuggestions|textEmailAddress"
+                android:inputType="number"
                 android:maxLines="1"
                 android:scrollHorizontally="true" />
         </android.support.design.widget.TextInputLayout>
@@ -62,7 +62,7 @@
                     android:ems="10"
                     android:hint="Dog Name"
                     android:imeOptions="actionDone"
-                    android:inputType="textPassword"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -85,7 +85,7 @@
                     android:ems="10"
                     android:hint="Dog Color"
                     android:imeOptions="actionDone"
-                    android:inputType="textPassword"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -107,7 +107,7 @@
                     android:ems="10"
                     android:hint="Dog Sex"
                     android:imeOptions="actionDone"
-                    android:inputType="textPassword"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -130,7 +130,7 @@
                     android:ems="10"
                     android:hint="Dog Sex"
                     android:imeOptions="actionDone"
-                    android:inputType="textPassword"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"/>
             </android.support.design.widget.TextInputLayout>
 
