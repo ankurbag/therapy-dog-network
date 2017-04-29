@@ -1,5 +1,6 @@
 package com.tdn.therapydog.Activities;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,6 +22,7 @@ public class CanineDetailsActivity extends AppCompatActivity implements CanineDe
 
     List<Dog> dogList ;
 
+    public static final String INTENT_DOG_INDEX = "dog_index";
     /**
      * The pager widget, which handles animation and allows swiping horizontally to access previous
      * and next wizard steps.
@@ -37,13 +39,21 @@ public class CanineDetailsActivity extends AppCompatActivity implements CanineDe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_canine_details);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
 
         dogList = DummyContent.getDogList();
 
+        Bundle bundle = getIntent().getExtras();
+        int index = 0;
+        if(bundle != null && bundle.containsKey(INTENT_DOG_INDEX)){
+            index = bundle.getInt(INTENT_DOG_INDEX, 0);
+        }
+
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+        mPager.setCurrentItem(index, true);
 
     }
 

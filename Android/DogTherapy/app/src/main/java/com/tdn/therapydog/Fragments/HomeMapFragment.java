@@ -1,6 +1,7 @@
 package com.tdn.therapydog.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,6 +17,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.tdn.therapydog.Activities.CanineDetailsActivity;
 import com.tdn.therapydog.DummyContent.DummyContent;
 import com.tdn.therapydog.R;
 import com.tdn.therapydog.model.Dog;
@@ -158,7 +160,11 @@ public class HomeMapFragment extends Fragment implements  OnMapReadyCallback, Go
         /*googleMap.animateCamera(CameraUpdateFactory.
                 newLatLngZoom(new LatLng((Math.abs(maxLat - minLat) ), (Math.abs(maxLon - minLon) )), 12.0f));*/
 
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(maxLat, maxLon)));
+
+
+        googleMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(dogList.get(0).getLocation().getLattitude(),
+                dogList.get(0).getLocation().getLongitude()) , 18.0f) );
+       // googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(maxLat, maxLon)));
         googleMap.setOnMarkerClickListener(this);
 
     }
@@ -168,9 +174,12 @@ public class HomeMapFragment extends Fragment implements  OnMapReadyCallback, Go
 
         int item = (Integer) marker.getTag();
 
+        Intent intent = new Intent(getActivity(), CanineDetailsActivity.class);
+        intent.putExtra(CanineDetailsActivity.INTENT_DOG_INDEX, item);
+        startActivity(intent);
 
 
-        return false;
+        return true;
     }
 
     /**

@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -117,6 +118,8 @@ public class CanineDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                Snackbar.make(view, "You can have this dog for 4 hours", Snackbar.LENGTH_LONG)
+                        .setAction("OK", null).show();
 
             }
         });
