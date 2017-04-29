@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -31,7 +30,7 @@ import java.util.List;
  * Use the {@link HomeMapFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeMapFragment extends SupportMapFragment implements  OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
+public class HomeMapFragment extends Fragment implements  OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -45,8 +44,8 @@ public class HomeMapFragment extends SupportMapFragment implements  OnMapReadyCa
 
     private OnFragmentInteractionListener mListener;
 
-    MapView mapView;
-    private static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";
+    private GoogleMap mMap;
+
 
     public HomeMapFragment() {
     }
@@ -73,18 +72,8 @@ public class HomeMapFragment extends SupportMapFragment implements  OnMapReadyCa
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_map, container, false);
-        mapView = (MapView) view.findViewById(R.id.mapView);
-        Bundle mapViewBundle = null;
-        if (savedInstanceState != null) {
-            mapViewBundle = savedInstanceState.getBundle(MAPVIEW_BUNDLE_KEY);
-        }
-        mapView.onCreate(mapViewBundle);
 
-
-        // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
-       // MapsInitializer.initialize(this.getActivity());
-
-        return inflater.inflate(R.layout.fragment_home_map, container, false);
+        return view;
     }
 
 
@@ -97,33 +86,29 @@ public class HomeMapFragment extends SupportMapFragment implements  OnMapReadyCa
     @Override
     public void onResume() {
         super.onResume();
-        //mapView.onResume();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mapView.onPause();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mapView.onDestroy();
     }
 
     @Override
     public void onLowMemory() {
         super.onLowMemory();
-        mapView.onLowMemory();
     }
 
     private void initViews(View view){
 
-        mapView = (MapView) view.findViewById(R.id.mapView);
         dogList = DummyContent.getDogList();
-        mapView = (MapView) view.findViewById(R.id.mapView);
-        mapView.getMapAsync(this);
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.mapView);
+        mapFragment.getMapAsync(this);
     }
 
     @Override
@@ -146,6 +131,7 @@ public class HomeMapFragment extends SupportMapFragment implements  OnMapReadyCa
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
+        mMap = googleMap;
         double minLat = Integer.MAX_VALUE;
         double maxLat = Integer.MIN_VALUE;
         double minLon = Integer.MAX_VALUE;
@@ -169,9 +155,10 @@ public class HomeMapFragment extends SupportMapFragment implements  OnMapReadyCa
         }
 
         double fitFactor = 1.5;
-        googleMap.animateCamera(CameraUpdateFactory.
-                newLatLngZoom(new LatLng((Math.abs(maxLat - minLat) * fitFactor), (Math.abs(maxLon - minLon) * fitFactor)), 12.0f));
+        /*googleMap.animateCamera(CameraUpdateFactory.
+                newLatLngZoom(new LatLng((Math.abs(maxLat - minLat) ), (Math.abs(maxLon - minLon) )), 12.0f));*/
 
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(maxLat, maxLon)));
         googleMap.setOnMarkerClickListener(this);
 
     }
